@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(https://cdn.pixabay.com/photo/2015/12/23/17/27/abstract-1105849_1280.jpg);
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 0;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.596);
+    z-index: -1;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #5ee07a;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.navbar-brand {
+    font-size: 55px;
+    padding-left: 2%;
+}
+
+#landinghome {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 8%;
+    padding-left: 20%;
+}
+
+.card-container {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit-card {
+    width: 460px;
+    height: 260px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: rotateY(0);
+    transition: transform 0.8s ease;
+}
+
+.credit-card {
+    transition: transform 0.6s ease;
+}
+
+.credit-card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+
+.card-front {
+    /* background: linear-gradient(135deg, #1C2529 50%, #A1D1B1 50%); */
+    background-image: url(../img/card\ front.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-front .chip {
+    width: 50px;
+    height: 35px;
+    background-image: url(https://as1.ftcdn.net/v2/jpg/10/20/60/82/1000_F_1020608219_T12kEPNNnvspHW8iul5Qs8C19vLpQiD1.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.card-front .card-number {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.card-front .card-holder {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.card-back {
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../img/card\ back.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-back .magnetic-strip {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 50px;
+}
+
+.card-back .cvv {
+    font-size: 1rem;
+}
+
+.text {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: 30%;
+}
+
+.text h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.btn {
+    font-family: 'Ropa Sans', sans-serif;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    border: 1px solid #1C2529;
+    padding: 0.8rem 2.1rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 531.28 200'%3E%3Cdefs%3E%3Cstyle%3E .shape %7B fill: %2300FF6A /* fill: %230E1822; */ %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='shape' points='415.81 200 0 200 115.47 0 531.28 0 415.81 200' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    background-color: #1C2529;
+    background-size: 200%;
+    background-position: 200%;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out;
+    transition-property: background-position, border, color;
+    position: relative;
+    z-index: 1;
+}
+
+.btn:active {
+    scale: 0.92;
+}
+
+.btn:hover {
+    border: 1px solid #00FF6A;
+    color: white;
+    background-position: 40%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.80);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal-content {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(19, 15, 64, 0.7)); */
+    background-color: rgba(255, 255, 255, 0.349);
+    color: white;
+    padding: 2em;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.50);
+}
+
+
+.form-control {
+    transition: all 0.3s ease;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+#creditAmount:hover,
+#debitAmount:hover,
+.form-control:hover {
+    border-color: #5ee07a;
+    background-color: #5ee07a;
+    color: black;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modal-content .form {
+    padding: 0;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+@media only screen and (max-width: 1200px) {
+    #landinghome {
+        padding-left: 10%;
+    }
+
+    .credit-card {
+        width: 400px;
+        height: 220px;
+    }
+
+    .text {
+        max-width: 300px;
+        margin-right: 20%;
+    }
+
+    .navbar-brand {
+        font-size: 45px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #landinghome {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20%;
+    }
+
+    .text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .credit-card {
+        width: 350px;
+        height: 200px;
+    }
+
+    .navbar-brand {
+        font-size: 40px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .navbar-brand {
+        font-size: 35px;
+    }
+
+    #landinghome{
+        flex-wrap: wrap;
+    }
+
+    .credit-card {
+        width: 300px;
+        height: 180px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .text h1 {
+        font-size: 1.5rem;
+    }
+
+    .text p {
+        font-size: 0.9rem;
+    }
+
+    .modal-content {
+        width: 60%;
+        padding: 1.8em;
+    }
+
+    .form-group input {
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 0.8em 1.7em;
+    }
+
+    .form-check-label {
+        font-size: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 576px) {
+    .navbar-brand {
+        font-size: 35px;
+    }
+
+    #landinghome{
+        flex-wrap: wrap;
+    }
+
+    .credit-card {
+        width: 280px;
+        height: 160px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .text h1 {
+        font-size: 1.2rem;
+    }
+
+    .text p {
+        font-size: 0.8rem;
+    }
+
+    #landinghome {
+        padding-left: 5%;
+    }
+
+    .modal-content {
+        width: 80%;
+        padding: 1.5em;
+    }
+
+    .btn {
+        padding: 0.7em 1.5em;
+    }
+
+    .form-check-label, .form-group input {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 90%;
+    }
+}
+
+
+h4 {
+    color: rgb(0, 255, 149);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+    background: #ffffff;
+
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn:hover {
+    background: #f30000;
+    color: #ffffff;
+}
