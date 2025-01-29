@@ -45,7 +45,7 @@ if (!localStorage.getItem('Avlbal')) {
 
 function updateBalanceDisplay() {
   const balance = localStorage.getItem('Avlbal');
-  document.getElementById('Avlbal').innerText = `${balance} Rs`;
+  document.getElementById('Avlbal').innerText = `${balance}  /- Rs`;
 }
 
 //Deposit window

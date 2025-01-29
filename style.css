@@ -7,6 +7,7 @@ body {
     background-image: url(https://cdn.pixabay.com/photo/2015/12/23/17/27/abstract-1105849_1280.jpg);
     height: 100vh;
     margin: 0;
+    padding: 0%;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -45,8 +46,8 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding-top: 8%;
-    padding-left: 20%;
+    /* padding-top: 8%; */
+    /* padding-left: 20%; */
 }
 
 .card-container {
@@ -148,7 +149,7 @@ body::before {
 .text {
     max-width: 400px;
     margin-left: auto;
-    margin-right: 30%;
+    /* margin-right: 30%; */
 }
 
 .text h1 {
@@ -405,7 +406,7 @@ button:hover {
 }
 
 
-h4 {
+h5{
     color: rgb(0, 255, 149);
 }
 

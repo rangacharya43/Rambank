@@ -16,14 +16,13 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1c25293d;">
-    <div class="container-fluid" style="height: 60px;">
-      <div class="logo" style="display: flex;">
-        <a href="#" style="display: flex; align-items: center; text-decoration: none;">
-          <img src="./img/logo.png" alt="Bank Logo"
-            style="height: 100%; width: auto; background-size: cover; position: fixed; z-index: -1;">
-          <span style="color: white; font-size: 30px;">B</span> <!-- #5ee07a -->
-          <span style="color:gray; font-size: 30px;">ank</span> <!--  #2C7744 -->
+    <div class="container" style="height: 60px;">
+      <div class="logo" style="display: flex; align-items: center;">
+        <a href="index.html" style="display: flex;  text-decoration: none;">
+          <img src="./img/logo.png" alt="Bank Logo" style="height: 80px; width: auto; background-size: cover;">
         </a>
+        <span style="color: white; font-size: 30px;">B</span> <!-- #5ee07a -->
+        <span style="color:gray; font-size: 30px;">ank</span> <!--  #2C7744 -->
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +31,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link nav-text" href="#">Home</a>
+            <a class="nav-link nav-text" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link nav-text" href="#">About us</a>
@@ -41,7 +40,7 @@
             <a class="nav-link nav-text" href="#">Contact us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-text" href="index.html">Login/signup</a>
+            <a class="nav-link nav-text" href="index.html">Logout</a>
           </li>
         </ul>
       </div>
@@ -57,71 +56,77 @@
 
 
 
-  <div id="landinghome">
-    <div class="card-container">
-      <div class="credit-card">
-        <div class="card-front">
-          <div class="chip"></div>
-          <div class="card-number" style="color: #ffffff;">1234 5678 9876 5432</span></div>
-          <div class="card-holder" style="color:#A1D1B1 ;">Bank Name</div>
-        </div>
-        <div class="card-back">
-          <div class="magnetic-strip" style="background-image: url(./img/strip.jpg);"> </div>
-          <div class="cvv">CVV: ***</div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col">
-          <div class="row text-start">
-            <div class="col-sm">
-              <h4>Account Holder Name:</h4>
+  <div id="landinghome" class="container-fluid p-0" style="height: 60vh;">
+    <div class="row p-0">
+      <div class="col-12 col-sm-6 justify-contant-center">
+        <div class="card-container">
+          <div class="credit-card">
+            <div class="card-front">
+              <div class="chip"></div>
+              <div class="card-number" style="color: #ffffff;">1234 5678 9876 5432</span></div>
+              <div class="card-holder mt-2" style="color:#A1D1B1 ;">Korada Varaprasad</div>
+              <div class="card-holder text-center" style="color:#A1D1B1 ;">valid  :  08/2035</div>
             </div>
-            <div class="col-sm" style="color: white;">
-              <p id="acname">Korada Varaprasad</p>
-            </div>
-          </div>
-          <div class="row text-start">
-            <div class="col-sm">
-              <h4>Account Number:</h4>
-            </div>
-            <div class="col-sm" style="color: white;">
-              <p id="acnum">123456789</p>
-            </div>
-          </div>
-          <div class="row text-start">
-            <div class="col-sm">
-              <h4>Account Type:</h4>
-            </div>
-            <div class="col-sm" style="color: white;">
-              <p>Savings</p>
-            </div>
-          </div>
-          <div class="row text-start">
-            <div class="col-sm">
-              <h4>Branch Name:</h4>
-            </div>
-            <div class="col-sm" style="color: white;">
-              <p>Visakhapatnam</p>
-            </div>
-          </div>
-          <div class="row text-start">
-            <div class="col-sm">
-              <h4>Available Balance:</h4>
-            </div>
-            <div class="col-sm" style="color: white;">
-              <p><span id="Avlbal"></span></p>
+            <div class="card-back">
+              <div class="magnetic-strip" style="background-image: url(./img/strip.jpg);"> </div>
+              <div class="cvv">CVV: 123</div>
             </div>
           </div>
         </div>
       </div>
+  
+      <div class="col-12 col-sm-6 justify-contant-center">
+        <div class="container-fluid pt-4">
+          <div class="row">
+            <div class="col">
+              <div class="row text-start">
+                <div class="col-sm">
+                  <h5>Account Holder Name:</h5>
+                </div>
+                <div class="col-sm" style="color: white;">
+                  <p id="acname">Korada Varaprasad</p>
+                </div>
+              </div>
+              <div class="row text-start">
+                <div class="col-sm">
+                  <h5>Account Number:</h5>
+                </div>
+                <div class="col-sm" style="color: white;">
+                  <p id="acnum">123456789</p>
+                </div>
+              </div>
+              <div class="row text-start">
+                <div class="col-sm">
+                  <h5>Account Type:</h5>
+                </div>
+                <div class="col-sm" style="color: white;">
+                  <p>Savings</p>
+                </div>
+              </div>
+              <div class="row text-start">
+                <div class="col-sm">
+                  <h5>Branch Name:</h5>
+                </div>
+                <div class="col-sm" style="color: white;">
+                  <p>Visakhapatnam</p>
+                </div>
+              </div>
+              <div class="row text-start">
+                <div class="col-sm">
+                  <h5>Available Balance:</h5>
+                </div>
+                <div class="col-sm" style="color: white;">
+                  <p class="bg-success"><span id="Avlbal"></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
     </div>
-
-
-
-
+    
+ 
   </div>
 
   <div class="text-center width-100%  pt-4">
